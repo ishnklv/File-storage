@@ -1,0 +1,53 @@
+{
+  "main": "src/index.js",
+  "scripts": {
+    "cov": "istanbul cover node_modules/mocha/bin/_mocha -- -u exports -t ${TIMEOUT:-2000} -R spec test/**.spec.js",
+    "test": "mocha  -t ${TIMEOUT:-2000} test/**.spec.js",
+    "start": "VERBOSE=1 DEBUG=1 ./bin/cli.js --port=4444 data"
+  },
+  "license": "MIT",
+  "name": "filestore",
+  "version": "0.6.0",
+  "description": "Extensible filestorage ",
+  "bin": {
+    "filestore": "cli.js"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rumkin/filestorage.git"
+  },
+  "keywords": [
+    "filestore",
+    "filestorage",
+    "files",
+    "microservice",
+    "service",
+    "http",
+    "api"
+  ],
+  "author": "rumkin",
+  "bugs": {
+    "url": "https://github.com/rumkin/filestorage/issues"
+  },
+  "homepage": "https://github.com/rumkin/filestorage#readme",
+  "dependencies": {
+    "argentum": "^0.6.0",
+    "bluebird": "^3.7.2",
+    "connect": "^3.7.0",
+    "hall": "^0.3.0",
+    "istanbul": "^0.4.5",
+    "lodash": "^4.17.20",
+    "mkdirp": "^0.5.1",
+    "mongodb": "^3.6.2",
+    "nedb": "^1.8.0",
+    "pify": "^2.3.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "mocha": "^8.1.3",
+    "node-fetch": "^2.6.1"
+  }
+}

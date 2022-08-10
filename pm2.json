@@ -1,0 +1,14 @@
+{
+  "apps": [{
+    "name": "file-storage",
+    "cwd": "/srv/file-storage",
+    "script": "bin/cli.js",
+    "args": ["--port=4444", "data"],
+    "env": {
+      "NODE_ENV": "production",
+      "PORT": 4444,
+      "DEBUG": 1
+    },
+    "min_uptime": 2000,
+  }]
+}
